@@ -12,6 +12,11 @@
     public function ajouterPas($pas){
         $this->listePas[]=$pas;
     }
+    public function initialiserFiche(){
+        $this->dateDebut=null;
+        $this->dateFin=null;
+        $this->state="En cour";
+    }
     /**
      * Get the value of nom
      */ 
