@@ -21,6 +21,14 @@
             $pas->initialiserPas();
         }
     }
+    public function executerFiche(){
+        $this->dateDebut=date('Y-m-d');
+        $this->dateFin=null;
+        $this->statut="En cours";
+        foreach($this->listePas as $pas){
+            $pas->initialiserPas();
+        }
+    }
     /**
      * Get the value of nom
      */ 
