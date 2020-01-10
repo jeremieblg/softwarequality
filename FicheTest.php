@@ -39,6 +39,19 @@
       $this->assertEquals(date('Y-m-d'),$fiche->getDateDebut());
       $this->assertNull($fiche->getDateFin());
     }
+    public function testTerminerFiche(){
+      $mockPas1=$this->createMock(Pas::Class);
+      $mockPas1->expects($this->once())
+              ->method('initialiserPas');
+      $mockPas2=$this->createMock(Pas::Class);
+      $mockPas2->expects($this->once())
+              ->method('initialiserPas');
+
+      $fiche=new Fiche('nom',array($mockPas1,$mockPas2));
+      $fiche->terminerFiche();
+
+      $this->assertEquals(date('Y-m-d'),$fiche->getDateFin());
+    }
   }
   
 ?>

@@ -29,6 +29,12 @@
             $pas->initialiserPas();
         }
     }
+    public function terminerFiche(){
+        $this->dateFin=date('Y-m-d');
+        foreach($this->listePas as $pas){
+            $pas->initialiserPas();
+        }
+    }
     /**
      * Get the value of nom
      */ 
