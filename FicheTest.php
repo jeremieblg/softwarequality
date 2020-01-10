@@ -15,12 +15,14 @@
       $pas1=$this->createStub(Pas::Class);
       $pas2=$this->createStub(Pas::Class);
       $mockPas=$this->createMock(Pas::Class);
-      $mockPas->expects($this->exactly(2));
-      $mockPas->method('initialiserPas');
+      $mockPas->expects($this->exactly(2))->method('initialiserPas');
       $listePas[]=array($pas1,$pas2);
       $fiche=new Fiche('nomFiche',$listePas);
       $fiche->initialiserFiche();
     }
+    // public function testExecuterFiche(){
+
+    // }
   }
   
 ?>
