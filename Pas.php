@@ -24,6 +24,7 @@
       $this->statut = 'non passer';
     }
     public function executerPas($resultatObtenu,$commentaire,$statut){
+      $this->dateExecution = date('Y-m-d');
       $this->resultatObtenu = $resultatObtenu;
       $this->commentaire = $commentaire;
       $this->statut = $statut;
