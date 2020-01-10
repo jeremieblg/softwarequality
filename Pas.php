@@ -23,6 +23,11 @@
       $this->dateExecution = null;
       $this->statut = 'non passer';
     }
+    public function executerPas($resultatObtenu,$commentaire,$statut){
+      $this->resultatObtenu = $resultatObtenu;
+      $this->commentaire = $commentaire;
+      $this->statut = $statut;
+    }
 
     /**
      * Get the value of dateExecution
