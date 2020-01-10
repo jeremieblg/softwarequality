@@ -55,7 +55,7 @@
      * @depends testExecuterPas
      */
     function testExecuterPasDateExecution($pas){
-      $this->assertSame(date('Y-m-d'), $pas->getDateExecution());
+      $this->assertEquals(date('Y-m-d'), $pas->getDateExecution());
     }
     /**
      * @depends testExecuterPas

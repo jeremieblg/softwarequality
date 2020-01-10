@@ -12,13 +12,18 @@
       $this->assertEquals(1,count($fiche->getListePas()));
     }
     public function testInitialiserFiche(){
-      $pas1=$this->createStub(Pas::Class);
-      $pas2=$this->createStub(Pas::Class);
-      $mockPas=$this->createMock(Pas::Class);
-      $mockPas->expects($this->exactly(2))->method('initialiserPas');
-      $listePas[]=array($pas1,$pas2);
-      $fiche=new Fiche('nomFiche',$listePas);
+      $mockPas1=$this->createMock(Pas::Class);
+      $mockPas1->expects($this->once())
+              ->method('initialiserPas');
+      $mockPas2=$this->createMock(Pas::Class);
+      $mockPas2->expects($this->once())
+              ->method('initialiserPas');
+
+      $fiche=new Fiche('nom',array($mockPas1,$mockPas2));
       $fiche->initialiserFiche();
+
+      $this->assertNull($fiche->getDateDebut());
+      $this->assertNull($fiche->getDateFin());
     }
     // public function testExecuterFiche(){
 

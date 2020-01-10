@@ -5,7 +5,8 @@
     private $dateFin;
     private $statut;
     private $listePas = array();
-    public function _construct($nom, $listePas){
+
+    public function __construct($nom, $listePas){
       $this->nom=$nom;
       $this->listePas = (is_array($listePas))?$listePas:[];
     }
@@ -15,7 +16,10 @@
     public function initialiserFiche(){
         $this->dateDebut=null;
         $this->dateFin=null;
-        $this->state="En cour";
+        $this->statut="En cours";
+        foreach($this->listePas as $pas){
+            $pas->initialiserPas();
+        }
     }
     /**
      * Get the value of nom
