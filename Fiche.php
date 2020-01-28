@@ -11,6 +11,9 @@
       $this->listePas = (is_array($listePas))?$listePas:[];
     }
     public function ajouterPas($pas){
+        if(count($this->listePas)==3){
+            throw new tooMuchPasException;
+        }
         $this->listePas[]=$pas;
     }
     public function initialiserFiche(){
