@@ -1,8 +1,8 @@
 <?php
   use PHPUnit\Framework\TestCase;
-  require 'Fiche.php';
-  require 'Pas.php';
-  require 'tooMuchPasException.php';
+  require_once 'Fiche.php';
+  require_once 'Pas.php';
+  require_once 'tooMuchPasException.php';
   class FicheTest extends TestCase {
     protected $fiche;
     protected static $dateDuJour;
