@@ -25,7 +25,7 @@
         }
     }
     public function executerFiche(){
-        $this->dateDebut=date('Y-m-d');
+        $this->dateDebut=new dateTime();
         $this->dateFin=null;
         $this->statut="En cours";
         foreach($this->listePas as $pas){
@@ -33,7 +33,7 @@
         }
     }
     public function terminerFiche(){
-        $this->dateFin=date('Y-m-d');
+        $this->dateFin=new dateTime();
         foreach($this->listePas as $pas){
             $pas->initialiserPas();
         }

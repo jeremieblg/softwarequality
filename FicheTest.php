@@ -5,6 +5,15 @@
   require 'tooMuchPasException.php';
   class FicheTest extends TestCase {
     protected $fiche;
+    protected static $dateDuJour;
+    public static function setUpBeforeClass():void{
+      fwrite(STDOUT,__METHOD__."\n");
+      self::$dateDuJour = new DateTime();      
+    }
+    public static function tearDownAfterClass():void{
+      fwrite(STDOUT,"\n".__METHOD__."\n");
+      self::$dateDuJour = null;      
+    }
 
     protected function setUp():void{
       fwrite(STDOUT,__METHOD__."\n");
@@ -57,8 +66,7 @@
       $this->fiche=new Fiche('nom',array($mockPas1,$mockPas2));
       $this->fiche->executerFiche();
 
-      $this->assertEquals(date('Y-m-d'),$this->fiche->getDateDebut());
-      $this->assertNull($this->fiche->getDateFin());
+      $this->assertEqualsWithDelta(self::$dateDuJour->getTimestamp(),$this->fiche->getDateDebut()->getTimestamp(),3);
     }
     public function testTerminerFiche(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
@@ -71,8 +79,8 @@
 
       $this->fiche=new Fiche('nom',array($mockPas1,$mockPas2));
       $this->fiche->terminerFiche();
+      $this->assertEqualsWithDelta(self::$dateDuJour->getTimestamp(),$this->fiche->getDateFin()->getTimestamp(),3);
 
-      $this->assertEquals(date('Y-m-d'),$this->fiche->getDateFin());
     }
   }
   
