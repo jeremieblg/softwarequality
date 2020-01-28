@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="ma-suite" tests="11" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.021036">
+    <testsuite name="FicheTest" file="/home/utilisateur/dev/projet/php/softwarequality/FicheTest.php" tests="4" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.018448">
+      <testcase name="testAjouterPas" class="FicheTest" classname="FicheTest" file="/home/utilisateur/dev/projet/php/softwarequality/FicheTest.php" line="29" assertions="1" time="0.011858"/>
+      <testcase name="testInitialiserFiche" class="FicheTest" classname="FicheTest" file="/home/utilisateur/dev/projet/php/softwarequality/FicheTest.php" line="42" assertions="4" time="0.005407"/>
+      <testcase name="testExecuterFiche" class="FicheTest" classname="FicheTest" file="/home/utilisateur/dev/projet/php/softwarequality/FicheTest.php" line="57" assertions="3" time="0.000906"/>
+      <testcase name="testTerminerFiche" class="FicheTest" classname="FicheTest" file="/home/utilisateur/dev/projet/php/softwarequality/FicheTest.php" line="71" assertions="3" time="0.000277"/>
+    </testsuite>
+    <testsuite name="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" tests="7" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.002588">
+      <testcase name="testAjouterFiche" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="24" assertions="1" time="0.001150"/>
+      <testcase name="testInitialiserCampagne" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="51" assertions="1" time="0.000068"/>
+      <testcase name="testExecuterCampagne" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="70" assertions="1" time="0.000057"/>
+      <testcase name="testCalculerStatutKO" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="90" assertions="1" time="0.000981"/>
+      <testcase name="testCalculerStatutEnCour" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="108" assertions="1" time="0.000146"/>
+      <testcase name="testCalculerStatutOk" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="126" assertions="1" time="0.000121"/>
+      <testcase name="testTerminerCampagne" class="CampagneTest" classname="CampagneTest" file="/home/utilisateur/dev/projet/php/softwarequality/CampagneTest.php" line="144" assertions="1" time="0.000065"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
