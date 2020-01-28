@@ -1,8 +1,8 @@
 <phpunit>
     <testsuites>
         <testsuite name="ma-suite">
-            <file>FicheTest.php</file>
-            <file>CampagneTest.php</file>
+            <file>./test/FicheTest.php</file>
+            <file>./test/CampagneTest.php</file>
             <exclude>PasTest.php</exclude>
             <exclude>vendor</exclude>
         </testsuite>
