@@ -21,6 +21,9 @@
         fwrite(STDOUT,__METHOD__."\n");
         unset($this->campagne);
     }
+    /**
+     *  @covers Campagne::ajouterFiche
+     */
     public function testAjouterFiche(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
       $fiche1=$this->createStub(Fiche::class);
@@ -48,6 +51,10 @@
       $this->expectException(tooMuchFicheException::class);
       $this->campagne->ajouterFiche($fiche11);
     }
+
+    /**
+     *  @covers Campagne::initialiserCampagne
+     */
     public function testInitialiserCampagne(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
 
@@ -67,6 +74,10 @@
       $this->assertNull($this->campagne->getDateDebut());
       $this->assertNull($this->campagne->getDateFin());
     }
+
+     /**
+     *  @covers Campagne::executerCampagne
+     */
     public function testExecuterCampagne(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
 
@@ -87,6 +98,9 @@
       $this->assertEquals('En cours',$this->campagne->getStatut());
 
     }
+     /**
+     *  @covers Campagne::calculStatut
+     */
     public function testCalculerStatutKO(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
       $stubFiche1 = $this->createStub(Fiche::class);
@@ -105,6 +119,9 @@
       $this->assertEquals('KO', $this->campagne->getStatut());
 
     }
+     /**
+     *  @covers Campagne::calculStatut
+     */
     public function testCalculerStatutEnCour(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
       $stubFiche1 = $this->createStub(Fiche::class);
@@ -123,6 +140,9 @@
       $this->assertEquals('En cours', $this->campagne->getStatut());
 
     }
+     /**
+     *  @covers Campagne::calculStatut
+     */
     public function testCalculerStatutOk(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
       $stubFiche1 = $this->createStub(Fiche::class);
@@ -141,6 +161,9 @@
       $this->assertEquals('OK', $this->campagne->getStatut());
 
     }
+     /**
+     *  @covers Campagne::terminerCampagne
+     */
     public function testTerminerCampagne(){
       fwrite(STDOUT,"===========================>".__METHOD__."\n");
       $this->expectException(dateDebutIsEmpty::class);
